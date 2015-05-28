@@ -40,7 +40,7 @@ REVEAL_HEADER = """
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
                 <link rel="stylesheet" href="css/reveal.min.css">
-                <link rel="stylesheet" href="css/theme/default.css" id="theme">
+                <link rel="stylesheet" href="css/theme/%(theme)s" id="theme">
 
                 <!-- For syntax highlighting -->
                 <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -118,6 +118,7 @@ REVEAL_FOOTER = """
 DEFAULT_AUTHOR = "Default Author"
 DEFAULT_TITLE = "Default Title"
 DEFAULT_DESCRIPTION = "Default Description"
+DEFAULT_THEME = "default.css"
 
 class Deck(object):
 
@@ -174,6 +175,7 @@ class Deck(object):
            author = data.get('author', DEFAULT_AUTHOR),
            title = data.get('title', DEFAULT_TITLE),
            description = data.get('description', DEFAULT_DESCRIPTION),
+           theme = data.get('theme', DEFAULT_THEME),
        ))
 
    def write_footer(self, data):

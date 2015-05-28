@@ -3,6 +3,7 @@ header:
   author: John
   title: Example Presentation
   description: This presentation is very example like
+  theme: default.css
 
 slides:
 
